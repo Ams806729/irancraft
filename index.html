@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101810">
+<title>سرور ماینکرفت | به دنیای ما بپیوند!</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800;900&display=swap');
+:root{--bg:#0b100c;--panel:#151e16;--panel2:#1c2a1d;--green:#68e56d;--lime:#b3ff76;--text:#f1f7ef;--muted:#b1c2b0;--line:#314632}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#29492a 0,transparent 48%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0b100ceF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.cube{width:38px;height:38px;display:grid;place-items:center;background:linear-gradient(135deg,#8cff78,#2f9c44);color:#0a180b;border:3px solid #c4ffae;box-shadow:4px 4px 0 #234326;font-size:21px}.links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}.links a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #83f184;border-radius:8px;padding:11px 17px;background:var(--green);color:#071007;font-weight:900;cursor:pointer;font-family:inherit;box-shadow:0 4px 0 #347b39;transition:.15s}.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #347b39}.btn.secondary{background:transparent;color:var(--text);border-color:#48654a;box-shadow:none}
+.hero{padding:82px 0 65px;text-align:center;position:relative;overflow:hidden}.eyebrow{display:inline-block;border:1px solid #466d45;border-radius:999px;padding:5px 13px;color:var(--lime);background:#152618;font-size:13px}.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.25;margin:20px auto 14px;max-width:850px;font-weight:900}.hero h1 span{color:var(--green);text-shadow:0 0 26px #56d95a44}.hero p{max-width:650px;margin:0 auto 26px;color:var(--muted);font-size:17px}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pixel-scene{height:110px;max-width:650px;margin:45px auto 0;display:flex;align-items:end;justify-content:center;gap:7px;opacity:.9}.block{width:clamp(24px,5vw,50px);aspect-ratio:1;background:#387d39;border:3px solid #6ebc54;box-shadow:inset -7px -7px 0 #25572b;image-rendering:pixelated}.block.dirt{background:#8b613b;border-color:#bd8a55;box-shadow:inset -7px -7px 0 #684329}.block.stone{background:#6c7770;border-color:#9da69f;box-shadow:inset -7px -7px 0 #4d5851}.block.tall{height:90px;aspect-ratio:auto}.block.mid{height:62px;aspect-ratio:auto}
+section{padding:52px 0}.section-head{text-align:center;margin-bottom:26px}.section-head h2{font-size:clamp(24px,4vw,34px);margin:0 0 6px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#1b291c,#111811);border:1px solid var(--line);border-radius:13px;padding:22px;box-shadow:0 10px 30px #0002}.icon{font-size:29px}.card h3{margin:8px 0 4px}.card p{margin:0;color:var(--muted);font-size:14px}.ipbox{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#101a11;border:1px dashed #629c5d;border-radius:12px;padding:16px 18px;max-width:700px;margin:20px auto 0}.ip{direction:ltr;text-align:left;font:700 18px ui-monospace,Consolas,monospace;color:var(--lime);overflow-wrap:anywhere}.tiny{font-size:12px;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.rule{display:flex;gap:12px;align-items:flex-start;padding:15px;border:1px solid var(--line);background:var(--panel);border-radius:10px}.num{flex:0 0 32px;height:32px;display:grid;place-items:center;background:#27492a;color:var(--lime);font-weight:900;border-radius:6px}
+.store-note{text-align:center;padding:28px;border:1px solid #3c603c;border-radius:14px;background:linear-gradient(135deg,#192a1a,#111811)}.store-note .btn{margin-top:13px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#e4ffe2;color:#102012;padding:10px 16px;border-radius:8px;font-weight:800;transition:.2s;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.links{display:none}.grid{grid-template-columns:1fr}.rules{grid-template-columns:1fr}.hero{padding-top:56px}.ipbox{align-items:stretch;flex-direction:column}.ip{text-align:center}.ipbox .btn{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="cube">▦</span><span>IranCraft <span style="color:var(--green)">MC</span></span></a>
+  <nav class="links"><a href="#features">ویژگی‌ها</a><a href="#join">ورود به سرور</a><a href="#rules">قوانین</a><a href="#store">فروشگاه</a></nav>
+  <a class="btn" href="#join">ورود به بازی ↗</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+  <span class="eyebrow">◆ یک ماجراجویی تازه شروع می‌شود</span>
+  <h1>دنیای خودت را <span>بساز!</span></h1>
+  <p>به جمع بازیکن‌های ما بپیوند، ماجراجویی کن، سازه‌های خفن بساز و با دوست‌هات دنیای ماینکرفت رو فتح کن.</p>
+  <div class="hero-actions"><a class="btn" href="#join">🎮 اتصال به سرور</a><a class="btn secondary" href="#features">کشف امکانات ↓</a></div>
+  <div class="pixel-scene" aria-hidden="true"><div class="block dirt"></div><div class="block"></div><div class="block mid"></div><div class="block stone"></div><div class="block tall"></div><div class="block"></div><div class="block dirt"></div><div class="block mid"></div><div class="block stone"></div></div>
+</div></section>
+<section id="features"><div class="wrap"><div class="section-head"><h2>چرا IranCraft؟</h2><p>ماجراجویی تو از همین‌جا شروع می‌شه.</p></div>
+<div class="grid">
+  <article class="card"><div class="icon">🌲</div><h3>دنیای بقا</h3><p>منابع جمع کن، خانه بساز و در کنار بقیه بازیکن‌ها پیشرفت کن.</p></article>
+  <article class="card"><div class="icon">⚔️</div><h3>رقابت و چالش</h3><p>مهارتت رو نشون بده و در رویدادها و چالش‌های سرور شرکت کن.</p></article>
+  <article class="card"><div class="icon">🤝</div><h3>جامعه دوستانه</h3><p>دوست‌های جدید پیدا کن، گروه بساز و تجربه‌ات رو با بقیه به اشتراک بذار.</p></article>
+</div></div></section>
+<section id="join"><div class="wrap"><div class="section-head"><h2>آماده‌ای وارد بازی بشی؟</h2><p>آدرس سرور رو کپی کن و در بخش Multiplayer وارد کن.</p></div>
+<div class="ipbox"><div><div class="tiny">آدرس سرور (IP)</div><div class="ip" id="server-ip">185.141.105.216:6843</div></div><button class="btn" onclick="copyIP()">کپی IP ⧉</button></div>
+<p class="tiny" style="text-align:center;margin-top:12px">نسخه: Java Edition · آدرس اتصال: 185.141.105.216:6843</p>
+</div></section>
+<section id="rules"><div class="wrap"><div class="section-head"><h2>قوانین سرور</h2><p>برای اینکه بازی برای همه جذاب بمونه.</p></div>
+<div class="rules">
+  <div class="rule"><span class="num">۱</span><div><b>احترام به بازیکنان</b><div class="tiny">توهین، آزار و رفتار تبعیض‌آمیز ممنوع است.</div></div></div>
+  <div class="rule"><span class="num">۲</span><div><b>بدون تقلب</b><div class="tiny">استفاده از چیت و ابزارهای غیرمجاز ممنوع است.</div></div></div>
+  <div class="rule"><span class="num">۳</span><div><b>حفظ اموال دیگران</b><div class="tiny">سرقت و تخریب سازه‌ها بدون اجازه ممنوع است.</div></div></div>
+  <div class="rule"><span class="num">۴</span><div><b>گوش دادن به مدیریت</b><div class="tiny">برای حل اختلاف‌ها با تیم مدیریت همکاری کنید.</div></div></div>
+</div></div></section>
+<section id="store"><div class="wrap"><div class="store-note"><div class="icon">💎</div><h2 style="margin:6px 0">فروشگاه سرور</h2><p style="color:var(--muted);margin:0">به‌زودی: رنک‌ها، آیتم‌های ویژه و امکانات بیشتر.</p><a class="btn secondary" href="https://craftingstore.net/" target="_blank" rel="noopener">راه‌اندازی فروشگاه ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> IranCraft · ساخته‌شده برای جامعه ماینکرفت</span><span>این وب‌سایت رسمی Minecraft یا Mojang نیست.</span></div></footer>
+<div class="toast" id="toast">IP کپی شد!</div>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+async function copyIP(){const ip=document.getElementById('server-ip').textContent.trim();try{await navigator.clipboard.writeText(ip)}catch(e){const t=document.createElement('textarea');t.value=ip;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}const toast=document.getElementById('toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
+</script>
+</body></html>
